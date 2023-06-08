@@ -1,0 +1,94 @@
+<!-- 1. Create a signup form and display form data in your web 
+page on submission. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form Example</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        h2, h3 {
+            color: #333;
+        }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        #formData {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Signup Form Example</h2>
+    <h3>Create an Account</h3>
+  
+    <form id="signupForm" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+      
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+      
+        <input type="submit" value="Sign Up">
+    </form>
+  
+    <h2>Form Data</h2>
+  
+    <div id="formData"></div>
+  
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form submission
+        
+            // Get form data
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+        
+            // Display form data
+            var formDataDiv = document.getElementById("formData");
+            formDataDiv.innerHTML = "<p>Name: " + name + "</p>" +
+                                    "<p>Email: " + email + "</p>" +
+                                    "<p>Password: " + password + "</p>";
+        
+            // Reset the form
+            document.getElementById("signupForm").reset();
+        }
+    </script>
+</body>
+</html>

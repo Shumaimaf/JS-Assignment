@@ -1,0 +1,39 @@
+<!-- 2. Suppose in your webpage there is content area in which 
+you have entered your item details, but user can only see 
+some details on first look. When user clicks on “Read 
+more” button, full detail of that particular item will be 
+displayed. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Details</title>
+</head>
+<body>
+  <h2>Item Details</h2>
+  
+  <div class="content">
+    <h2>Item Title</h2>
+    <p>Short description of the item.</p>
+    <button onclick="showFullDetails(this)">Read More</button>
+    <div class="full-details" style="display: none;">
+      <p>Full details of the item.</p>
+      <p>More information about the item.</p>
+      <p>Additional details, specifications, etc.</p>
+    </div>
+  </div>
+
+  <script>
+    function showFullDetails(button) {
+      var content = button.parentNode;
+      var fullDetails = content.getElementsByClassName("full-details")[0];
+
+      button.style.display = "none";
+      fullDetails.style.display = "block";
+    }
+  </script>
+</body>
+</html>

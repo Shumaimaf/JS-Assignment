@@ -1,0 +1,73 @@
+<!-- 5. Show a counter in browser. Counter should increase on click on increase 
+button and decrease on click on decrease button. And show updated counter 
+value in browser. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Example</title>
+  <style>
+    /* Add your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h2 {
+      color: #333;
+    }
+    
+    #counter {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff5722;
+    }
+    
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Counter Example: Increase and Decrease</h2>
+  
+  <h3>Counter: <span id="counter">0</span></h3>
+  
+  <button onclick="increaseCounter()">Increase</button>
+  <button onclick="decreaseCounter()">Decrease</button>
+
+  <script>
+    let counterValue = 0;
+
+    function increaseCounter() {
+      counterValue++;
+      updateCounter();
+    }
+
+    function decreaseCounter() {
+      if (counterValue > 0) {
+        counterValue--;
+        updateCounter();
+      }
+    }
+
+    function updateCounter() {
+      let counterElement = document.getElementById("counter");
+      counterElement.textContent = counterValue;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- 2. Create a paragraph and two buttons “zoom in ”(+) and “zoom out”(-).
+Events | JAVASCRIPT
+Page 2 of 2
+On each click on “zoom in”(+) , add 10px in font size of paragraph.
+And on each click on “zoom out”(-) , minus 10px in font size of paragraph. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>2. Create a paragraph and two buttons “zoom in ”(+) and “zoom out”(-).
+    Events | JAVASCRIPT
+    Page 2 of 2
+    On each click on “zoom in”(+) , add 10px in font size of paragraph.
+    And on each click on “zoom out”(-) , minus 10px in font size of paragraph.
+    </h2>
+
+    <p id="myParagraph">My Paragraph</p>
+  
+
+<button onclick="zoomIn()">Zoom In (+)</button>
+<button onclick="zoomOut()">Zoom Out (-)</button>
+
+<script>
+var fontSize = 16; 
+function zoomIn() {
+  fontSize += 10;
+  updateFontSize();
+}
+
+function zoomOut() {
+  if (fontSize >= 20) { 
+    fontSize -= 10;
+    updateFontSize();
+  }
+}
+
+function updateFontSize() {
+  var paragraph = document.getElementById("myParagraph");
+  paragraph.style.fontSize = fontSize + "px";
+}
+</script>
+</body>
+</html>

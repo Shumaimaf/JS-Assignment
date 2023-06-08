@@ -1,0 +1,30 @@
+<!-- 4. Display an image in browser. Change the picture on mouseover and set the
+first picture on mouseout. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+<body>
+    <h2>4. Display an image in browser. Change the picture on mouseover and set the
+        first picture on mouseout.</h2>
+<img id="image" src="https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1662609460915/5a44d8796a507f51964f937d1808c901.png" width="300px" onmouseover="changePicture()" onmouseout="resetPicture()" />
+
+<script>
+function changePicture() {
+  var image = document.getElementById("image");
+  image.src = "https://images.priceoye.pk/zte-blade-a52-pakistan-priceoye-iekc3.jpg";
+}
+
+function resetPicture() {
+  var image = document.getElementById("image");
+  image.src = "https://images-na.ssl-images-amazon.com/images/I/41vrhJ2AKML._AC_.jpg";
+}
+</script>
+
+</body>
+</html>
