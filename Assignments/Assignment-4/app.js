@@ -2,21 +2,21 @@
 
 // 1. Declare 3 variables in one statement 
 
-let variable1, variable2, variable3;
+// 
 
 // 2. Declare 5 legal & 5 illegal variable names. 
 
-var 123abc 
-var my-variable 
-var MY@VARIABLE
-var function
-var my variable
+// var 123abc 
+// var my-variable 
+// var MY@VARIABLE
+// var function
+// var my variable
 
-var myVariable
-var count
-var firstName
-var totalCost
-var isLogin
+// var myVariable
+// var count
+// var firstName
+// var totalCost
+// var isLogin
 
 // 3. Display this in your browser
 // a) A heading stating “Rules for naming JS variables”
