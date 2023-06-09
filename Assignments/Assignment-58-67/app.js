@@ -15,12 +15,12 @@ for (let i = 0; i < renderElements.length; i++) {
 }
 //..............iv........//
 const first = document.getElementById('first-name');
-first.value = "Atiqa";
+first.value = "Shumaima";
 //............v........//
 const last = document.getElementById('last-name');
-last.value = "Pasha";
+last.value = "fatime";
 const email = document.getElementById('email');
-email.value = "atiqapasha234@gmail.com";
+email.value = "shumaimaf@gmail.com";
 
 
 //.............Question2............//
