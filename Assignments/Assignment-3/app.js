@@ -12,6 +12,7 @@ alert(age);
 // have visited this site N times”.
 
 var visits = 'You have visited this site';
+n = 0;
 var numOfvisits = n + 1 ;
 alert(numOfvisits);
 
