@@ -34,7 +34,7 @@ if (input === 'red') {
         }
         else if (input === 'green') {
             document.write("Move now");
-//         }
+        }
 
 // 4. Write a program to take input remaining fuel in car (in 
 // litres) from user. If the current fuel is less than 0.25litres, 
@@ -48,71 +48,44 @@ if (input === '0.25') {
             document.write("Have a safe journey :)");
         }
 
-// 5. Run this script, & check whether alert message would be
+///   5. Run this script, & check whether alert message would be
 // displayed or not. Record the outputs.
-// a .
-// var a = 4;
-// if (++a === 5){
-// alert("given condition for variable a is true");
-// }
-// output
-// given condition for variable a is true
-
-// b . 
-// var b = 82;
-// if (b++ === 83){
-// alert("given condition for variable b is true");
-//  }
-// output
-// statement is not executed because the condition is false.
-
-// // c.
-// var c = 12;
-// if (c++ === 13){
-// alert("condition 1 is true");
-// }
-// if (c === 13){
-// alert("condition 2 is true");
-// }
-// if (++c < 14){
-// alert("condition 3 is true");
-// }
-// if(c === 14){
-// alert("condition 4 is true");
-// }
-// // output 
-// only first two conditions are true 
-
-// d .
-//  var materialCost = 20000;
-// var laborCost = 2000;
-// var totalCost = materialCost + laborCost;
-// if (totalCost === laborCost + materialCost){
-// alert("The cost equals");
-// }
-// output 
-// alert contains only string,it will not calculate total cost
-
-// // e .
-//  if (true){
-// alert("True");
-// }
-// if (false){
-// alert("False");
-// }
-// // output
-// alert shows only if statement because the second condition is false and it will not show an alertbox
-
-// User Input & Conditional Statement | JAVASCRIPT
-// Page 3 of 4
-
-// f .
-//  if("car" < "cat"){
-// alert("car is smaller than cat");
-// }
-// output
-// function is executed, displaying the message "car is smaller than cat" as an alert box.
-
+var a = ("4");
+if (++a === 5){
+alert("given condition for variable a is true");
+}
+ var b = ("82");
+if (b++ === 83){
+alert("given condition for variable b is true");
+}
+var c =("12");
+if (c++ === 13){
+alert("condition 1 is true");
+}
+if (c === 13){
+alert("condition 2 is true");
+}
+if (++c < 14){
+alert("condition 3 is true");
+}
+if(c === 14){
+alert("condition 4 is true");
+}
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if (totalCost === laborCost + materialCost){
+alert("The cost equals");
+}
+if (true){
+alert("True");
+}
+if (false){
+alert("False");
+}
+if("car" < "cat") {
+alert("car is smaller than cat");
+}
 // 6. Write a program to take input the marks obtained in three
 // subjects & total marks. Compute & show the resulting
 // percentage on your page. Take percentage & compute 

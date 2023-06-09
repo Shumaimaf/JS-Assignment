@@ -1,78 +1,90 @@
-//.........Question1...........//
-//.......i.........//
+// i. Get element of id “main-content” and assign them in a variable.
 
-let main = document.getElementById('main-content');
-//.......ii.........//  
-let childElements = main.children;
-console.log(childElements)
-for (let i = 0; i < childElements.length; i++) {
-      console.log(childElements[i]);
+var mainContent = document.getElementById("main-content");
+
+// ii. Display all child elements of “main-content” element.
+
+var mainContent = document.getElementById("main-content");
+var childElements = mainContent.childNodes;
+
+for (var i = 0; i < childElements.length; i++) {
+  var childElement = childElements[i];
+
+  // Check if the child is an element node (Node.ELEMENT_NODE)
+  if (childElement.nodeType === Node.ELEMENT_NODE) {
+    console.log(childElement);
+  }
 }
-//..............iii.........//
-const renderElements = document.getElementsByClassName('render');
-for (let i = 0; i < renderElements.length; i++) {
-      console.log(renderElements[i].innerHTML);
+
+// iii. Get all elements of class “render” and show their innerHTML 
+// in browser
+
+var renderElements = document.getElementsByClassName("render");
+
+for (var i = 0; i < renderElements.length; i++) {
+  var element = renderElements[i];
+  console.log(element.innerHTML);
 }
-//..............iv........//
-const first = document.getElementById('first-name');
-first.value = "Shumaima";
-//............v........//
-const last = document.getElementById('last-name');
-last.value = "fatime";
-const email = document.getElementById('email');
-email.value = "shumaimaf@gmail.com";
+
+// iv. Fill input value whose element id first-name using javascript.
+
+document.getElementById("first-name").value = "John";
+
+// v. Repeat part iv for id ”last-name” and “email”
+
+document.getElementById("last-name").value = "Doe";
+document.getElementById("email").value = "johndoe@example.com";
 
 
-//.............Question2............//
+// QUESTION 2 
 
-//..........i.....//
-const formContentElement = document.getElementById('form-content');
-console.log(formContentElement.nodeType); // Output: 1
+// 2. use HTML code of question 1 and show the result on browser.
 
-//.........ii........//
-const lastNameElement = document.getElementById('lastName');
-const lastNameNodeType = lastNameElement.nodeType;
-console.log(lastNameNodeType)
-const lastNameChildNodeType = lastNameElement.firstChild.nodeType;
-console.log(lastNameElement.firstChild)
-console.log(lastNameChildNodeType);
+// i. What is node type of element having id “form-content”.
 
-//.........iii........//
+var formContent = document.getElementById("form-content");
+var nodeType = formContent.nodeType;
+console.log("Node type of element with id 'form-content': " + nodeType);
 
-lastNameElement.firstChild.nodeValue = "hello new value"
+// ii. Show node type of element having id “lastName” and its child node.
 
-//............iv.........//
+var lastName = document.getElementById("lastName");
+var lastNameNodeType = lastName.nodeType;
+var childNode = lastName.childNodes[0];
+var childNodeType = childNode.nodeType;
 
-const mainContentElement = document.getElementById('main-content');
-const firstChildElement = mainContentElement.firstElementChild;
-console.log(firstChildElement)
-const lastChildElement = mainContentElement.lastElementChild;
-console.log(lastChildElement);
+console.log("Node type of element with id 'lastName': " + lastNameNodeType);
+console.log("Node type of its child node: " + childNodeType);
 
-//........v....//
+// iii. Update child node of element having id “lastName”.
 
-const lastNameSiblingNext = lastNameElement.nextSibling;
-console.log(lastNameSiblingNext);
-const lastNameSiblingPrevious = lastNameElement.previousSibling;
-console.log(lastNameSiblingPrevious);
+var lastName = document.getElementById("lastName");
+var childNode = lastName.childNodes[0];
+childNode.nodeValue = "Smith";
 
-//.........vi....//
-const emailElement = document.getElementById('email');
-const emailParentNode = emailElement.parentNode;
-console.log(emailParentNode)
-const emailNodeType = emailElement.nodeType;
-console.log(emailNodeType)
+// iv. Get First and last child of id “main-content”.
 
-//........vii..//
-const resultDiv = document.getElementById('result');
-resultDiv.innerHTML = 'i. Node Type of "form-content": ' + formContentElement.nodeType + '<br><br>';
-resultDiv.innerHTML += 'ii. Node Type of "lastName": ' + lastNameNodeType + '<br>';
-resultDiv.innerHTML += '   Child Node Type of "lastName": ' + lastNameChildNodeType + '<br><br>';
-resultDiv.innerHTML += 'iii. Updated Child Node of "lastName": ' + lastNameElement.firstChild.nodeValue + '<br><br>';
-resultDiv.innerHTML += 'iv. First Child of "main-content": ' + firstChildElement.nodeName + '<br>';
-resultDiv.innerHTML += '   Last Child of "main-content": ' + lastChildElement.nodeName + '<br><br>';
-resultDiv.innerHTML += 'v. Next Sibling of "lastName": ' + lastNameSiblingNext.nodeName + '<br>';
-resultDiv.innerHTML += '   Previous Sibling of "lastName": ' + lastNameSiblingPrevious.nodeName + '<br><br>';
-resultDiv.innerHTML += 'vi. Parent Node of "email": ' + emailParentNode.nodeName + '<br>';
-resultDiv.innerHTML += '    Node Type of "email": ' + emailNodeType;
+var mainContent = document.getElementById("main-content");
+var firstChild = mainContent.firstChild;
+var lastChild = mainContent.lastChild;
 
+console.log("First child of 'main-content': ", firstChild);
+console.log("Last child of 'main-content': ", lastChild);
+
+// v. Get next and previous siblings of id “lastName”. 
+
+var lastName = document.getElementById("lastName");
+var nextSibling = lastName.nextSibling;
+var previousSibling = lastName.previousSibling;
+
+console.log("Next sibling of 'lastName': ", nextSibling);
+console.log("Previous sibling of 'lastName': ", previousSibling);
+
+// vi. Get parent node and node type of element having id “email”
+
+var email = document.getElementById("email");
+var parentNode = email.parentNode;
+var nodeType = email.nodeType;
+
+console.log("Parent node of 'email': ", parentNode);
+console.log("Node type of 'email': ", nodeType);

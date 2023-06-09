@@ -61,7 +61,7 @@ function calculator() {
 
   calculator();
 
-5. Write a function that squares its argument.
+// 5. Write a function that squares its argument.
 
 function squares() {
     var input = parseFloat(prompt('Enter the number'));

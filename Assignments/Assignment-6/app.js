@@ -27,17 +27,13 @@ document.write('The Value of a-- is: ' + num4 , '</br>' , 'Now the value of a is
 // --a - --b + ++b;
 // --a - --b + ++b + b--
 
-var a = 2, b = 1;
-var result = --a - --b + ++b + b--;
---a 
-The prefix decrement operator -- before a decreases the value of a by 1 and returns the new value, which is 1. Therefore, a is now equal to 1.
---a - --b
-The prefix decrement operator -- before b decreases the value of b by 1 and returns the new value, which is 0. Therefore, b is now equal to 0. The expression --a - --b becomes 1 - 0, which equals 1.
---a - --b + ++b
-The prefix increment operator ++ before b increases the value of b by 1 and returns the new value, which is 1. Therefore, b is now equal to 1. The expression --a - --b + ++b becomes 1 - 0 + 1, which equals 2.
---a - --b + ++b + b--
-The postfix decrement operator -- after b returns the current value of b (1) and then decreases it by 1. Therefore, the expression --a - --b + ++b + b-- becomes 1 - 0 + 1 + 1, which equals 3.
-
+var a =2, b=1
+var a1 = --a - --b
+document.write("a is: "+a1 + '</br>')
+var a2 = --a - --b + ++b;
+document.write("b is: "+a2 + '</br>')
+var a3 = --a - --b + ++b + b--;
+document.write("result: "+a3 + '</br>')
 
 // 3. Write a program that takes input a name from user & 
 // greet the user.

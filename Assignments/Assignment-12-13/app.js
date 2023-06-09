@@ -15,7 +15,7 @@ if (!isNaN(char)) {
 } else if (char.charCodeAt(0) >= 97 && char.charCodeAt(0) <= 122) {
     alert("The input is a lowercase letter.");
 } else {
-    alert("The input is not a number or letter.");
+    alert("The input is not a number or letter.");
 }
 
 // 2. Write a JavaScript program that accept two integers and
